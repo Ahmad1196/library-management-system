@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "test": "vitest run",
+    "server": "nodemon server.js",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed:admin": "node scripts/seedAdmin.js",
+    "seed:books": "node scripts/seedBooks.js"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +30,11 @@
     "morgan": "^1.12.1",
     "multer": "^2.4.0",
     "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.3.0",
+    "vitest": "^5.0.3"
   }
 }
